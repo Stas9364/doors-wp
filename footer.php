@@ -26,7 +26,8 @@
                     ?>
 
                     <span class="accent-color">&copy; </span>
-                    Рога и копыта, 2021
+                    <span><?php echo bloginfo('name'); ?>,</span>
+                    <span><?php the_time('Y'); ?></span>
                 </div>
             </div>
         </div>

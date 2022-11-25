@@ -98,7 +98,7 @@ function doors_setup()
         )
     );
 
-    add_image_size('adv_thumbnail', 100, 100, true);
+    add_image_size('', 100, 100, true);
 }
 
 add_action('after_setup_theme', 'doors_setup');

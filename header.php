@@ -52,9 +52,24 @@
             ]);
             ?>
 
-            <div class="phone">
-                <a href="tel:+99999999999">&#9742; +9 (999) 999-99-99</a>
-            </div>
+            <?php
+            $settings = get_posts([
+                'post_type' => 'post',
+                'numberposts' => 1,
+                'category_name' => 'settings',
+            ]);
+            foreach ($settings as $post) {
+                setup_postdata($post);
+                ?>
+
+                <div class="phone">
+                    <a href="<?php echo CFS()->get('phone_number_s') ?>">&#9742; <?php echo CFS()->get('phone_number'); ?></a>
+                </div>
+                <?php
+            }
+            wp_reset_postdata();
+            ?>
+
         </div>
     </div>
 </div>

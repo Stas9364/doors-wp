@@ -20,9 +20,7 @@ get_header();
                                      alt="<?php echo $row['gallery_title_img'] ?>">
                             </a>
 
-                            <?php
-                        }
-                        ?>
+                            <?php } ?>
 
                     </div>
                 </div>
@@ -52,17 +50,16 @@ get_header();
                                 <td><?php echo $row['value'] ?></td>
                             </tr>
 
-                            <?php
-                        }
-                        ?>
+                            <?php } ?>
 
                     </table>
-                    <a class="btn" href=""><?php echo CFS()->get('information_title'); ?></a>
+                    <a class="btn"
+                       href="/<?php echo CFS()->get('information_slug'); ?>"><?php echo CFS()->get('information_title'); ?>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-
 
 <?php
 get_footer();
